@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Yapılacaklar Listesi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gelişmiş Yapılacaklar Listesi</h1>
+        <div class="todo-input">
+            <input type="text" id="taskInput" placeholder="Yeni görev ekle...">
+            <select id="taskCategory">
+                <option value="genel">Genel</option>
+                <option value="is">İş</option>
+                <option value="okul">Okul</option>
+                <option value="ev">Ev</option>
+                <option value="alışveriş">Alışveriş</option>
+            </select>
+            <select id="taskPriority">
+                <option value="düşük">Düşük</option>
+                <option value="orta">Orta</option>
+                <option value="yüksek">Yüksek</option>
+            </select>
+            <input type="date" id="taskDueDate">
+            <button id="addTask"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="filters">
+            <select id="filterCategory">
+                <option value="tümü">Tüm Kategoriler</option>
+                <option value="genel">Genel</option>
+                <option value="is">İş</option>
+                <option value="okul">Okul</option>
+                <option value="ev">Ev</option>
+                <option value="alışveriş">Alışveriş</option>
+            </select>
+            <select id="filterPriority">
+                <option value="tümü">Tüm Öncelikler</option>
+                <option value="düşük">Düşük</option>
+                <option value="orta">Orta</option>
+                <option value="yüksek">Yüksek</option>
+            </select>
+            <button id="sortByDate">Tarihe Göre Sırala</button>
+        </div>
+        <div class="todo-list" id="todoList">
+        </div>
+        <div class="todo-stats">
+            <span id="taskCount">0 yapılacak var</span>
+            <div class="stats-details">
+                <span id="completedCount">0 tamamlandı</span>
+                <span id="overdueCount">0 gecikmiş</span>
+            </div>
+            <button id="clearAll">Hepsini Temizle</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
